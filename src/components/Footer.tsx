@@ -82,6 +82,7 @@ export function Footer({ setCurrentPage }: FooterProps) {
               <li className="flex items-center">
                 <Phone size={18} className="mr-2 flex-shrink-0" />
                 <span className="text-sm">+91 7809909978</span>
+              
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="mr-2 flex-shrink-0" />
