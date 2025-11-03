@@ -35,7 +35,7 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
               <span className="text-2xl font-bold text-gray-800">BT</span>
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-gray-800">Blue Tick Reality</h1>
+              <h1 className="text-2xl font-bold text-gray-800">Bluetick Reality</h1>
               <p className="text-xs text-gray-600">Bhopal, Madhya Pradesh</p>
             </div>
           </div>
