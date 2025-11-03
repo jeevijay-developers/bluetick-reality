@@ -6,7 +6,16 @@ import {
   Award,
 } from "lucide-react";
 
-export function Home() {
+interface HomeProps {
+  setCurrentPage: (page: string) => void;
+}
+
+export function Home({ setCurrentPage }: HomeProps) {
+  const handleContactClick = () => {
+    setCurrentPage("contact");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div>
       <section className="relative h-[600px] bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center overflow-hidden">
@@ -147,8 +156,11 @@ export function Home() {
                       ₹{i === 1 ? "1.5" : i === 2 ? "85" : "2.2"}{" "}
                       {i === 2 ? "L" : "Cr"}
                     </span>
-                    <button className="text-gray-900 font-semibold hover:text-[#DAEC8B] transition-colors">
-                      View Details →
+                    <button
+                      onClick={handleContactClick}
+                      className="text-gray-900 font-semibold hover:text-[#DAEC8B] transition-colors"
+                    >
+                      contact →
                     </button>
                   </div>
                 </div>
@@ -167,7 +179,10 @@ export function Home() {
             Let us help you discover the perfect home or investment opportunity
             in Bhopal
           </p>
-          <button className="bg-gray-900 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-800 transition-all transform hover:scale-105 shadow-lg">
+          <button
+            onClick={handleContactClick}
+            className="bg-gray-900 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-800 transition-all transform hover:scale-105 shadow-lg"
+          >
             Contact Us Today
           </button>
         </div>
