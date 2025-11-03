@@ -77,32 +77,27 @@ export function Footer({ setCurrentPage }: FooterProps) {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin size={18} className="mr-2 mt-1 flex-shrink-0" />
-                <span className="text-sm">Bhopal, Madhya Pradesh, India</span>
+                <span className="text-sm">Third Floor, Plot No 155, Service Rd, Near Axis Bank, Zone-I, Maharana Pratap Nagar, Bhopal, Madhya Pradesh 462011</span>
               </li>
               <li className="flex items-center">
                 <Phone size={18} className="mr-2 flex-shrink-0" />
-                <span className="text-sm">+91 XXX-XXX-XXXX</span>
+                <span className="text-sm">+91 7809909978</span>
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="mr-2 flex-shrink-0" />
-                <span className="text-sm">info@bluetickreality.com</span>
+                <span className="text-sm">dealmakersindianar@gmail.com</span>
               </li>
             </ul>
             <div className="flex space-x-4 mt-6">
+              
               <a
-                href="#"
-                className="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#DAEC8B] hover:text-gray-900 transition-colors"
-              >
-                <Facebook size={18} />
-              </a>
-              <a
-                href="#"
+                href="https://www.instagram.com/bluetickrealty/" target='blank'
                 className="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#DAEC8B] hover:text-gray-900 transition-colors"
               >
                 <Instagram size={18} />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/bluetickrealty/" target='blank'
                 className="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#DAEC8B] hover:text-gray-900 transition-colors"
               >
                 <Linkedin size={18} />

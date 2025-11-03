@@ -103,7 +103,7 @@ export function Services() {
             <div>
               <div className="rounded-2xl overflow-hidden shadow-xl h-full">
                 <img
-                  src="https://images.pexels.com/photos/3778618/pexels-photo-3778618.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  src="https://media.istockphoto.com/id/1409298953/photo/real-estate-agents-shake-hands-after-the-signing-of-the-contract-agreement-is-complete.jpg?s=612x612&w=0&k=20&c=SFybbpGMB0wIoI0tJotFqptzAYK_mICVITNdQIXqnyc="
                   alt="Rental services"
                   className="w-full h-full object-cover"
                 />

@@ -76,11 +76,9 @@ export function Contact({ setCurrentPage }: ContactProps) {
                       Address
                     </h3>
                     <p className="text-gray-600">
-                      Bluetick Reality Office
-                      <br />
-                      Bhopal, Madhya Pradesh 462001
-                      <br />
-                      India
+                      Third Floor, Plot No 155, Service Rd, Near Axis Bank,
+                      Zone-I, Maharana Pratap Nagar, Bhopal, Madhya Pradesh
+                      462011
                     </p>
                   </div>
                 </div>
@@ -93,8 +91,7 @@ export function Contact({ setCurrentPage }: ContactProps) {
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">
                       Phone
                     </h3>
-                    <p className="text-gray-600">+91 XXX-XXX-XXXX</p>
-                    <p className="text-gray-600">+91 YYY-YYY-YYYY</p>
+                    <p className="text-gray-600">+91 07809909978</p>
                   </div>
                 </div>
 
@@ -106,8 +103,9 @@ export function Contact({ setCurrentPage }: ContactProps) {
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">
                       Email
                     </h3>
-                    <p className="text-gray-600">info@bluetickreality.com</p>
-                    <p className="text-gray-600">sales@bluetickreality.com</p>
+                    <p className="text-gray-600">
+                      dealmakersindianar@gmail.com
+                    </p>
                   </div>
                 </div>
 
@@ -233,7 +231,7 @@ export function Contact({ setCurrentPage }: ContactProps) {
           </h2>
           <div className="rounded-2xl overflow-hidden shadow-xl h-[500px] bg-gray-300">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d234742.01238489883!2d77.24066545!3d23.2599333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c428f8fd68fbd%3A0x2155716d572d4f8!2sBhopal%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3666.198945397409!2d77.43201097532028!3d23.23584647902481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c4352ce5e96bb%3A0xeb671e4d6d043464!2sBluetick%20Realty!5e0!3m2!1sen!2sin!4v1762170996204!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}
