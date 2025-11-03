@@ -5,7 +5,7 @@ export function About() {
     <div>
       <section className="py-20 bg-gradient-to-br from-[#DAEC8B] to-[#c8dc79]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">About Blue Tick Reality</h1>
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">About Bluetick Reality</h1>
           <p className="text-xl text-gray-800 max-w-3xl mx-auto">
             Your trusted partner in real estate since inception, serving Bhopal with dedication and expertise
           </p>
@@ -18,7 +18,7 @@ export function About() {
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Who We Are</h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Blue Tick Reality is a premier real estate agency based in the heart of Bhopal, Madhya Pradesh.
+                Bluetick Reality is a premier real estate agency based in the heart of Bhopal, Madhya Pradesh.
                 We specialize in residential and commercial property transactions, helping individuals and
                 businesses find their perfect space.
               </p>

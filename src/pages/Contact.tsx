@@ -51,7 +51,7 @@ export function Contact() {
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">Address</h3>
                     <p className="text-gray-600">
-                      Blue Tick Reality Office<br />
+                      Bluetick Reality Office<br />
                       Bhopal, Madhya Pradesh 462001<br />
                       India
                     </p>

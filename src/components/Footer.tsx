@@ -19,7 +19,7 @@ export function Footer({ setCurrentPage }: FooterProps) {
               <div className="w-10 h-10 bg-[#DAEC8B] rounded-full flex items-center justify-center mr-3">
                 <span className="text-xl font-bold text-gray-800">BT</span>
               </div>
-              <h3 className="text-xl font-bold text-white">Blue Tick Reality</h3>
+              <h3 className="text-xl font-bold text-white">Bluetick Reality</h3>
             </div>
             <p className="text-sm mb-4">
               Building Dreams, Brick by Brick in Bhopal. Your trusted partner in real estate.
@@ -112,7 +112,7 @@ export function Footer({ setCurrentPage }: FooterProps) {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-sm">© 2025 Blue Tick Reality. All rights reserved.</p>
+          <p className="text-sm">© 2025 Bluetick Reality. All rights reserved.</p>
         </div>
       </div>
     </footer>
