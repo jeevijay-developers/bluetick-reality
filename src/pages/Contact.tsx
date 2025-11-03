@@ -1,21 +1,38 @@
-import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
-import { useState } from 'react';
+import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
+import { useState } from "react";
 
-export function Contact() {
+interface ContactProps {
+  setCurrentPage: (page: string) => void;
+}
+
+export function Contact({ setCurrentPage }: ContactProps) {
+  const handleViewProperties = () => {
+    setCurrentPage("properties");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleScheduleConsultation = () => {
+    const formElement = document.getElementById("contact-form");
+    if (formElement) {
+      formElement.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  };
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert('Thank you for your message! We will get back to you soon.');
-    setFormData({ name: '', email: '', phone: '', message: '' });
+    alert("Thank you for your message! We will get back to you soon.");
+    setFormData({ name: "", email: "", phone: "", message: "" });
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -26,9 +43,12 @@ export function Contact() {
     <div>
       <section className="py-20 bg-gradient-to-br from-[#DAEC8B] to-[#c8dc79]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">Get In Touch</h1>
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Get In Touch
+          </h1>
           <p className="text-xl text-gray-800 max-w-3xl mx-auto">
-            Have questions? We're here to help you find your dream property in Bhopal
+            Have questions? We're here to help you find your dream property in
+            Bhopal
           </p>
         </div>
       </section>
@@ -37,10 +57,13 @@ export function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-8">Contact Information</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-8">
+                Contact Information
+              </h2>
               <p className="text-lg text-gray-600 mb-10 leading-relaxed">
-                Reach out to us for any inquiries about properties, services, or to schedule a consultation.
-                Our team is ready to assist you with all your real estate needs.
+                Reach out to us for any inquiries about properties, services, or
+                to schedule a consultation. Our team is ready to assist you with
+                all your real estate needs.
               </p>
 
               <div className="space-y-6">
@@ -49,9 +72,13 @@ export function Contact() {
                     <MapPin size={24} className="text-gray-800" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-1">Address</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                      Address
+                    </h3>
                     <p className="text-gray-600">
-                      Third Floor, Plot No 155, Service Rd, Near Axis Bank, Zone-I, Maharana Pratap Nagar, Bhopal, Madhya Pradesh 462011
+                      Third Floor, Plot No 155, Service Rd, Near Axis Bank,
+                      Zone-I, Maharana Pratap Nagar, Bhopal, Madhya Pradesh
+                      462011
                     </p>
                   </div>
                 </div>
@@ -61,7 +88,9 @@ export function Contact() {
                     <Phone size={24} className="text-gray-800" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-1">Phone</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                      Phone
+                    </h3>
                     <p className="text-gray-600">+91 07809909978</p>
                   </div>
                 </div>
@@ -71,8 +100,12 @@ export function Contact() {
                     <Mail size={24} className="text-gray-800" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-1">Email</h3>
-                    <p className="text-gray-600">dealmakersindianar@gmail.com</p>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                      Email
+                    </h3>
+                    <p className="text-gray-600">
+                      dealmakersindianar@gmail.com
+                    </p>
                   </div>
                 </div>
 
@@ -81,20 +114,32 @@ export function Contact() {
                     <Clock size={24} className="text-gray-800" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-1">Business Hours</h3>
-                    <p className="text-gray-600">Monday - Saturday: 10:00 AM - 7:00 PM</p>
-                    <p className="text-gray-600">Sunday: 10:00 AM - 2:00 PM</p>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                      Business Hours
+                    </h3>
+                    <p className="text-gray-600">
+                      Monday - Saturday: 10:00 AM - 7:00 PM
+                    </p>
+                    <p className="text-gray-600">Sunday: 12:00 PM - 4:00 PM</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div>
-              <div className="bg-gray-50 rounded-2xl p-8 shadow-lg">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
+              <div
+                className="bg-gray-50 rounded-2xl p-8 shadow-lg"
+                id="contact-form"
+              >
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                  Send Us a Message
+                </h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-semibold text-gray-700 mb-2"
+                    >
                       Full Name *
                     </label>
                     <input
@@ -110,7 +155,10 @@ export function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-semibold text-gray-700 mb-2"
+                    >
                       Email Address *
                     </label>
                     <input
@@ -126,7 +174,10 @@ export function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label
+                      htmlFor="phone"
+                      className="block text-sm font-semibold text-gray-700 mb-2"
+                    >
                       Phone Number
                     </label>
                     <input
@@ -141,7 +192,10 @@ export function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-semibold text-gray-700 mb-2"
+                    >
                       Message *
                     </label>
                     <textarea
@@ -172,7 +226,9 @@ export function Contact() {
 
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">Our Location</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">
+            Our Location
+          </h2>
           <div className="rounded-2xl overflow-hidden shadow-xl h-[500px] bg-gray-300">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3666.198945397409!2d77.43201097532028!3d23.23584647902481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c4352ce5e96bb%3A0xeb671e4d6d043464!2sBluetick%20Realty!5e0!3m2!1sen!2sin!4v1762170996204!5m2!1sen!2sin"
@@ -190,15 +246,24 @@ export function Contact() {
 
       <section className="py-20 bg-gray-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Start Your Property Journey?</h2>
+          <h2 className="text-4xl font-bold mb-6">
+            Ready to Start Your Property Journey?
+          </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Whether you're buying, selling, or renting, our expert team is here to guide you every step of the way.
+            Whether you're buying, selling, or renting, our expert team is here
+            to guide you every step of the way.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <button className="bg-[#DAEC8B] text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#c8dc79] transition-all transform hover:scale-105 shadow-lg">
+            <button
+              onClick={handleScheduleConsultation}
+              className="bg-[#DAEC8B] text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#c8dc79] transition-all transform hover:scale-105 shadow-lg"
+            >
               Schedule a Consultation
             </button>
-            <button className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-gray-900 transition-all">
+            <button
+              onClick={handleViewProperties}
+              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-gray-900 transition-all"
+            >
               View Properties
             </button>
           </div>
