@@ -16,6 +16,11 @@ export function Home({ setCurrentPage }: HomeProps) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const handleExploreClick = () => {
+    setCurrentPage("properties");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div>
       <section className="relative h-[600px] bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center overflow-hidden">
@@ -36,7 +41,10 @@ export function Home({ setCurrentPage }: HomeProps) {
             Your trusted partner in finding the perfect property in Madhya
             Pradesh
           </p>
-          <button className="bg-[#DAEC8B] text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#c8dc79] transition-all transform hover:scale-105 inline-flex items-center shadow-lg">
+          <button
+            onClick={handleExploreClick}
+            className="bg-[#DAEC8B] text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#c8dc79] transition-all transform hover:scale-105 inline-flex items-center shadow-lg"
+          >
             Explore Properties
             <ArrowRight className="ml-2" size={20} />
           </button>
