@@ -1,4 +1,4 @@
-import { Target, Eye, Users, CheckCircle } from "lucide-react";
+import { Target, Eye, CheckCircle } from "lucide-react";
 
 export function About() {
   return (
