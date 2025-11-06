@@ -1,4 +1,5 @@
 import { Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import logo from "../../public/images/logo.png";
 
 interface FooterProps {
   setCurrentPage: (page: string) => void;
@@ -17,7 +18,7 @@ export function Footer({ setCurrentPage }: FooterProps) {
           <div>
             <div className="flex items-center">
               <div className="w-24 h-24 rounded-full flex items-center justify-center mr-1">
-                <img src="/images/logo.png" alt="Bluetick Reality Logo" />
+                <img src={logo} alt="Bluetick Reality Logo" />
               </div>
               <h3 className="text-xl font-bold text-white">Bluetick Reality</h3>
             </div>
