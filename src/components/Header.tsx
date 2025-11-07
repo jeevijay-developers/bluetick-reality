@@ -32,14 +32,16 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
             className="flex items-center cursor-pointer"
             onClick={() => handleNavClick("home")}
           >
-            <div className="w-24 h-24 rounded-full flex items-center justify-center mr-3">
+            <div className="w-20 md:w-24 h-20 md:h-24 rounded-full flex items-center justify-center mr-3">
               <img src={logo} alt="Bluetick Reality Logo" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-gray-800">
+              <h1 className="text-lg text-center md:text-2xl font-bold text-gray-800">
                 Bluetick Reality
               </h1>
-              <p className="text-xs text-gray-600">Bhopal, Madhya Pradesh</p>
+              <p className="text-[10px] md:text-xs text-gray-600">
+                Bhopal, Madhya Pradesh
+              </p>
             </div>
           </div>
 
